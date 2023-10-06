@@ -2,7 +2,7 @@ const CustomerFeedback = () => {
   return (
 <section className="text-neutral-700 dark:text-neutral-300">
   <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
-    <h3 className="mb-6 text-3xl font-bold">Testimonials</h3>
+    <h3 className="mb-6 text-3xl font-bold">Customer Feedback</h3>
     <p className="mb-6 pb-2 md:mb-12 md:pb-0">
     Discover the heartfelt experiences of our valued customers as they share their thoughts about our exceptional event planning services. 
     We take pride in creating memorable moments that leave a lasting impression

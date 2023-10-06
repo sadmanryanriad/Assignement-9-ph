@@ -2,7 +2,7 @@
 const Carousel = () => {
     return (
         <>
-                  <div className="carousel w-full">
+                  <div className="carousel w-full md:h-[600px]">
         <div id="slide1" className="carousel-item relative w-full">
           <img
             src="https://i.ibb.co/NjdL79Q/carousel5.jpg"
