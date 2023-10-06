@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 const menu = (
   <>
     <li>
-      {" "}
       <NavLink
         to="/"
         className={({ isActive, isPending }) =>
@@ -11,6 +10,16 @@ const menu = (
         }
       >
         Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to="/prices"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active font-bold" : ""
+        }
+      >
+        Prices
       </NavLink>
     </li>
     <li>
