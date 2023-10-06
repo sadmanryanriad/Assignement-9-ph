@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Weddings",
+    "image": "https://i.ibb.co/NjdL79Q/carousel5.jpg",
+    "price": "$5,000 - $20,000",
+    "description": "Make your dream wedding a reality with our expert event planning services."
+  },
+  {
+    "id": "2",
+    "title": "Birthday Parties",
+    "image": "https://i.ibb.co/4Fz1C0f/carousel6.jpg",
+    "price": "$500 - $2,000",
+    "description": "Celebrate your special day with a memorable birthday party planned just for you."
+  },
+  {
+    "id": "3",
+    "title": "Anniversaries",
+    "image": "https://i.ibb.co/86S7TSS/carousel1.jpg",
+    "price": "$1,000 - $5,000",
+    "description": "Commemorate your love story with a beautifully planned anniversary event."
+  },
+  {
+    "id": "4",
+    "title": "Engagement Parties",
+    "image": "https://i.ibb.co/1TRnzSy/carousel2.jpg",
+    "price": "$800 - $3,000",
+    "description": "Begin your journey to forever with an engagement party that sets the perfect tone."
+  },
+  {
+    "id": "5",
+    "title": "Retirement Parties",
+    "image": "https://i.ibb.co/bPCwmXp/carousel3.jpg",
+    "price": "$600 - $2,500",
+    "description": "Celebrate the end of one chapter and the start of a new adventure with a retirement party."
+  },
+  {
+    "id": "6",
+    "title": "Baby Shower",
+    "image": "https://i.ibb.co/cbqTkWq/carousel4.jpg",
+    "price": "$400 - $1,500",
+    "description": "Welcome a new life into the world with a heartwarming baby shower event."
+  }
+]
