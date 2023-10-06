@@ -12,7 +12,7 @@ const Card = ({card}) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <h2 className="font-semibold">Price: {price}</h2>
+        <h2 className="font-bold">Price: {price}</h2>
         <p>{description}</p>
         <div className="card-actions justify-center">
           <button className="btn btn-neutral btn-sm mt-5">See details</button>
