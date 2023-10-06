@@ -15,12 +15,12 @@ const menu = (
     </li>
     <li>
       <NavLink
-        to="/services"
+        to="/cart"
         className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "active font-bold" : ""
         }
       >
-        Services
+        Cart
       </NavLink>
     </li>
     <li>
