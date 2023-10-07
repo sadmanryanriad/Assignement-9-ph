@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const Card = ({card}) => {
     const { id, title, image, price, description } = card;
   return (
-    <div className="card-compact w-[22rem] bg-base-100 my-5 mx-auto">
+    <div className="card-compact w-[22rem] bg-base-100 my-5 mx-auto"  data-aos="zoom-in"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000">
       <figure>
         <img
           src={image}

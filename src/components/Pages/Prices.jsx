@@ -1,5 +1,14 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const Prices = () => {
+
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
   return (
     <div>
       {/* <!-- component --> */}
@@ -9,7 +18,7 @@ const Prices = () => {
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Custom Pricing for Event Services</h2>
             <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Want your custom event management? Choose the best pricing plan that suits your event management needs.</p>
           </div>
-          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <div data-aos = 'fade-right' data-aos-duration="1500" className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             {/* <!-- Pricing Card --> */}
             <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
               <h3 className="mb-4 text-2xl font-semibold">Basic Plan</h3>
@@ -53,7 +62,7 @@ const Prices = () => {
             </div>
 
             {/* Standard Plan */}
-            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <div data-aos = 'fade-up' data-aos-duration="1500" className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
               <h3 className="mb-4 text-2xl font-semibold">Standard Plan</h3>
               <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Ideal for managing medium-sized events with additional features.</p>
               <div className="flex justify-center items-baseline my-8">
@@ -94,7 +103,7 @@ const Prices = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <div data-aos = 'fade-right' data-aos-duration="1500" className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
               <h3 className="mb-4 text-2xl font-semibold">Premium Plan</h3>
               <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">For comprehensive event management with premium features.</p>
               <div className="flex justify-center items-baseline my-8">

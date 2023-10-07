@@ -1,22 +1,31 @@
 import { useLoaderData } from "react-router-dom";
-import HomeCards from "../HomeCards/HomeCards";
 import Services from "./Services";
 import CustomerFeedback from "../CustomerFeedback/CustomerFeedback";
 import Portfolio from "../Portfolio/Portfolio";
 import Banner from "../Header/Banner";
 import ScrollToTop from "react-scroll-to-top";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(()=>{
+    Aos.init();
+  },[])
 
   const data = useLoaderData();
   return (
     <div className=" space-y-10">
-      <Banner></Banner>
-      <Services></Services>
-      <h2 className="text-3xl font-bold text-center">Our Services</h2>
-      <HomeCards cards={data} ></HomeCards>
+
+      <div data-aos="fade-up" data-aos-duration="1500"><Banner></Banner></div>
+
+      <Services cards={data}></Services>
+
       <CustomerFeedback></CustomerFeedback>
-      <Portfolio></Portfolio>
+
+      <div data-aos = 'fade-right' data-aos-duration="1500"><Portfolio></Portfolio></div>
+
       <ScrollToTop smooth width='40' color='white' style={{ background: "#1D232B" }}></ScrollToTop>
     </div>
   );
