@@ -9,6 +9,10 @@ const ServiceDetail = () => {
   const singleData = data.find((element) => element.id == id);
   const { title, description, image, price } = singleData;
 
+  const handleButton = ()=>{
+    console.log('button clicked');
+  }
+
   useEffect(()=>{
     Aos.init();
   },[])
@@ -20,9 +24,12 @@ const ServiceDetail = () => {
           <img className="w-2/3 mx-auto rounded-lg" src={image} alt="" />
         </div >
         <div className="mx-auto border bg-base-300 rounded-lg my-6" data-aos="zoom-in-up" data-aos-duration="1000">
-        <h1 className="text-4xl font-semibold mt-12 mb-6 text-center">{title}</h1>
-        <h1 className="text-xl font-semibold mt-12 mb-6 text-center text-red-500">Price: {price}</h1>
-        <p className="text-base mb-28 text-center">{description}</p>
+        <h1 className="text-4xl font-semibold mt-12 mb-6 text-center text-orange-600">{title}</h1>
+        <h1 className="text-xl font-semibold mt-12 mb-6 text-center text-green-600">Price: {price}</h1>
+        <div className="text-center">
+              <button onClick={handleButton} className="btn btn-success mb-5">Add to Cart</button>
+          </div>
+        <p className="text-base mb-28 text-center text-orange-700">{description}</p>
         </div>
       </div>
     </div>

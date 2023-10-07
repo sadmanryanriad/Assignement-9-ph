@@ -11,12 +11,12 @@ const Root = () => {
         src="/scattered-forcefields.svg"
         alt=""
       />
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="min-h-screen">
-          <Navbar />
-          <Outlet />
-        </div>
+      <div className="max-w-6xl mx-auto relative">
+        <Navbar />
+        <Outlet />
+        <div className="mt-20">
         <Footer />
+        </div>
       </div>
       <Toaster />
     </div>
