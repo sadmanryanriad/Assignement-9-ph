@@ -1,4 +1,5 @@
 # Welcome to <span style="color:green">Event Management</span> website.🙂
+## [Live Site Link](https://assignment-9-event-management.web.app/)
 
  ### Here are some main features and functionality of this website:
 - **User-Friendly Navigation**: My event management website is built using React and React Router for smooth and one page navigation. You can easily explore different sections of the website, including service details, custom orders, and your cart without reloading the page. ✨
