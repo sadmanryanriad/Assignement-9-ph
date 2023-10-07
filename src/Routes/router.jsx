@@ -7,11 +7,13 @@ import Cart from "../components/Pages/Cart/Cart";
 import ServiceDetail from "../components/ServiceDetail/serviceDetail";
 import Prices from "../components/Pages/Prices";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../components/Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path:'/',

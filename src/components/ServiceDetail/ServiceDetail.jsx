@@ -7,7 +7,6 @@ const ServiceDetail = () => {
   const { id } = useParams();
   const data = useLoaderData();
   const singleData = data.find((element) => element.id == id);
-  console.log(singleData);
   const { title, description, image, price } = singleData;
 
   useEffect(()=>{

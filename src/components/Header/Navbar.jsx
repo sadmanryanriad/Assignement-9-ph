@@ -98,29 +98,38 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-lg">{menu}</ul>
       </div>
       <div className="navbar-end">
-
-{
-    user?.email ? <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
+        {user?.email ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
                 <img src={user.photoURL} />
-            </div>
-        </label>
-        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-                <button className="btn btn-sm text-green-600 btn-ghost">{user.displayName}</button>
-            </li>
-            <li>
-                <button onClick={logout} className="btn-warning hover:bg-blue-700 hover:text-white text-lg">Logout</button>
-            </li>
-        </ul>
-    </div>
-        :
-        <Link to='/login'>
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <button className="btn btn-sm text-green-600 btn-ghost">
+                  {user.displayName}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={logout}
+                  className="btn-warning hover:bg-blue-700 hover:text-white text-lg"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login">
             <button className="btn btn-sm  btn-ghost">Login</button>
-        </Link>
-}
-</div>
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
