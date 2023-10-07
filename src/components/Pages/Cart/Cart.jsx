@@ -1,16 +1,32 @@
+import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getLocalStorageId } from "../../../Utilities/localStorage";
 import CartProduct from "./CartProduct";
 
 const Cart = () => {
+
+
+    const cards = useLoaderData();
+    const [display, setDisplay] = useState(null);
+
+
+    useEffect(() => {
+        const LocalStoredData = getLocalStorageId();
+        const showCard = cards.filter(card => LocalStoredData.includes(parseInt(card.id)));
+        setDisplay(showCard);
+    }, [cards])
+
     return (
   <div className="pt-10">
     <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div className="rounded-lg md:w-2/3">
-        <CartProduct></CartProduct>
-        <CartProduct></CartProduct>
-        <CartProduct></CartProduct>
+        {
+            display?.length? display.map(card=><CartProduct key={card.id} card={card} ></CartProduct>)      
+            :
+            <p className="text-5xl">No data found. <span className="text-red-500">Add product to show!</span></p>
+        }
 
       </div>
-      {/* <!-- Sub total --> */}
       <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
         <div className="mb-2 flex justify-between">
           <p className="text-gray-700">Subtotal</p>

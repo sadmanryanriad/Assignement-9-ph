@@ -36,7 +36,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/cart',
-          element: <PrivateRouteCart><Cart></Cart></PrivateRouteCart>
+          element: <PrivateRouteCart><Cart></Cart></PrivateRouteCart>,
+          loader: ()=> fetch('/data.json')
         },
         {
           path: '/prices',

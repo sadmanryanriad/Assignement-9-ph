@@ -2,6 +2,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { getLocalStorageId, saveToLocalStorage } from "../../Utilities/localStorage";
+import toast from "react-hot-toast";
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -9,9 +11,22 @@ const ServiceDetail = () => {
   const singleData = data.find((element) => element.id == id);
   const { title, description, image, price } = singleData;
 
-  const handleButton = ()=>{
-    console.log('button clicked');
-  }
+
+  function handleButton() {
+    const intId = parseInt(id);
+
+    const storedId = getLocalStorageId();
+
+    const alreadyExist = storedId.find(Id => Id === intId);
+
+    if (!alreadyExist) {
+        saveToLocalStorage(intId);
+        toast.success("Added to Cart");
+    }
+    else{
+        toast.error('Already in the cart');
+    }
+}
 
   useEffect(()=>{
     Aos.init();
@@ -29,7 +44,7 @@ const ServiceDetail = () => {
         <div className="text-center">
               <button onClick={handleButton} className="btn btn-success mb-5">Add to Cart</button>
           </div>
-        <p className="text-base mb-28 text-center text-orange-700">{description}</p>
+        <p className="text-base mb-28 text-center text-orange-700 w-[80%] mx-auto">{description}</p>
         </div>
       </div>
     </div>

@@ -1,18 +1,21 @@
-const CartProduct = () => {
+import PropTypes from 'prop-types';
+
+const CartProduct = ({card}) => {
+    const {title,description,price,image} = card;
   return (
     <div>
       <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
         <img
-          src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+          src={image}
           alt="product-image"
           className="w-full rounded-lg sm:w-40"
         />
         <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
           <div className="mt-5 sm:mt-0">
             <h2 className="text-lg font-bold text-gray-900">
-              Nike Air Max 2019
+              {title}
             </h2>
-            <p className="mt-1 text-xs text-gray-700">36EU - 4US</p>
+            <p className="mt-1 text-xs text-gray-700 w-[80%]">{description.slice(0,50)}...</p>
           </div>
           <div className="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
             <div className="flex items-center border-gray-100">
@@ -23,7 +26,8 @@ const CartProduct = () => {
               <input
                 className="h-8 w-8 border bg-white text-center text-xs outline-none"
                 type="number"
-                value="2"
+                // ekhane default value dite hobe. sudhu value dile warning ase
+                defaultValue="1"
                 min="1"
               />
               <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
@@ -32,7 +36,7 @@ const CartProduct = () => {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <p className="text-sm">259.000 ₭</p>
+              <p className="text-sm">{price}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -54,5 +58,9 @@ const CartProduct = () => {
     </div>
   );
 };
+
+CartProduct.propTypes = {
+    card: PropTypes.object
+}
 
 export default CartProduct;
