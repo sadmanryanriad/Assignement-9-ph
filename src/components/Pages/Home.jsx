@@ -7,6 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import CalendarBox from "./Calendar/CalendarBox";
 
 const Home = () => {
 
@@ -25,6 +26,8 @@ const Home = () => {
       <CustomerFeedback></CustomerFeedback>
 
       <div data-aos = 'fade-right' data-aos-duration="1500"><Portfolio></Portfolio></div>
+
+      <CalendarBox></CalendarBox>
 
       <ScrollToTop smooth width='40' color='white' style={{ background: "#1D232B" }}></ScrollToTop>
     </div>
