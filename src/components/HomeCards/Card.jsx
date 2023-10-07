@@ -9,8 +9,9 @@ const Card = ({card}) => {
     data-aos-duration="1000">
       <figure>
         <img
+        className='rounded-lg h-[230px] w-full'
           src={image}
-          alt="Shoes"
+          alt="service image"
         />
       </figure>
       <div className="card-body">
