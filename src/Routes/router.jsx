@@ -8,6 +8,7 @@ import ServiceDetail from "../components/ServiceDetail/serviceDetail";
 import Prices from "../components/Pages/Prices";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../components/Pages/ErrorPage";
+import PrivateRouteCart from "../PrivateRoute/PrivateRouteCart";
 
 const router = createBrowserRouter([
     {
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
         },
         {
           path: '/cart',
-          element: <Cart></Cart>
+          element: <PrivateRouteCart><Cart></Cart></PrivateRouteCart>
         },
         {
           path: '/prices',
-          element: <Prices></Prices>
+          element: <PrivateRouteCart><Prices></Prices></PrivateRouteCart>
         }
       ]
     },

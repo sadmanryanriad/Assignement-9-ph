@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { FiLogIn } from "react-icons/fi";
 
 const menu = (
   <>
@@ -126,7 +127,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm  btn-ghost">Login</button>
+            <button className="btn btn-sm  btn-ghost">Login<span><FiLogIn></FiLogIn></span></button>
           </Link>
         )}
       </div>
