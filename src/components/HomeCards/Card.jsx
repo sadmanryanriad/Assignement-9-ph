@@ -19,7 +19,7 @@ const Card = ({card}) => {
         <h2 className="font-bold">Price: {price}</h2>
         <p>{description}</p>
         <div className="card-actions justify-center">
-          <Link to={`services/${id}`}><button className="btn btn-neutral hover:text-white btn-sm mt-5">See details</button></Link>
+          <Link to={`services/${id}`}><button className="btn btn-info hover:text-white btn-sm mt-5">See details</button></Link>
         </div>
       </div>
     </div>

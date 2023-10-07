@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className="btn text-sm btn-neutral hover:text-white normal-case md:text-xl"
+          className="btn text-sm btn-warning hover:text-white normal-case md:text-xl"
         >
           Event Management
         </Link>
@@ -127,7 +127,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm  btn-ghost">Login<span><FiLogIn></FiLogIn></span></button>
+            <button className="btn btn-sm  btn-success">Login<span><FiLogIn></FiLogIn></span></button>
           </Link>
         )}
       </div>

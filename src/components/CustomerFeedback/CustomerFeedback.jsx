@@ -46,7 +46,7 @@ const CustomerFeedback = () => {
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-right" data-aos-duration="1500">
           <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
             <div className="h-28 overflow-hidden rounded-t-lg bg-[#7a81a8]"></div>
             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
@@ -72,7 +72,7 @@ const CustomerFeedback = () => {
           </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-duration="1500">
+        <div data-aos="fade-right" data-aos-duration="1500">
           <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
             <div className="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
