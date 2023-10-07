@@ -5,15 +5,20 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
-    <div className="w-full h-screen" style={{backgroundImage: 'url(https://i.ibb.co/cX6Rm9b/scattered-forcefields.png)'}}>
-      <div className="max-w-6xl mx-auto">
+    <div className="relative">
+      <img
+        className="w-screen h-screen fixed top-0 left-0 z-0"
+        src="/scattered-forcefields.svg"
+        alt=""
+      />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="min-h-screen">
-        <Navbar></Navbar>
-        <Outlet></Outlet>
+          <Navbar />
+          <Outlet />
         </div>
-        <Footer></Footer>
+        <Footer />
       </div>
-      <Toaster></Toaster>
+      <Toaster />
     </div>
   );
 };
