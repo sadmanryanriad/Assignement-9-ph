@@ -1,18 +1,31 @@
-import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from './SocialLogin';
 
-const handleButton = ()=>{
-    console.log("button clicked");
-}
 
-const handleSubmit = e =>{
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
-}
 
 const Login = () => {
+  const navigate = useNavigate('/');
+  const {login} = useContext(AuthContext);
+  
+  const handleForm = e =>{
+  e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email,password);
+  
+    login(email,password)
+    .then(()=>{
+        toast.success('log in successful');
+        navigate('/');
+    })
+    .catch(error=>{
+        console.log(error.message);
+    })
+  
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-top md:pt-10">
@@ -20,18 +33,7 @@ const Login = () => {
         <div className="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">
           Login To Your Account
         </div>
-        <button onClick={handleButton} className="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
-          <span className="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-2xl">
-            <FaGoogle></FaGoogle>
-          </span>
-          <span>Login with Google</span>
-        </button>
-        <button onClick={handleButton} className="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
-          <span className="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-2xl">
-            <FaFacebook></FaFacebook>
-          </span>
-          <span>Login with Facebook</span>
-        </button>
+    <SocialLogin></SocialLogin>
         <div className="relative mt-10 h-px bg-gray-300">
           <div className="absolute left-0 top-0 flex justify-center w-full -mt-2">
             <span className="bg-white px-4 text-xs text-gray-500 uppercase">
@@ -40,7 +42,7 @@ const Login = () => {
           </div>
         </div>
         <div className="mt-10">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleForm}>
             <div className="flex flex-col mb-6">
               <label
                 type="email"

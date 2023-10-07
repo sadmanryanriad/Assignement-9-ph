@@ -1,7 +1,6 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
-
-  const user = false;
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const menu = (
   <>
@@ -59,8 +58,10 @@ const menu = (
 );
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-transparent">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -86,7 +87,10 @@ const Navbar = () => {
             {menu}
           </ul>
         </div>
-        <Link to={"/"} className="btn text-sm btn-neutral hover:text-white normal-case md:text-xl">
+        <Link
+          to={"/"}
+          className="btn text-sm btn-neutral hover:text-white normal-case md:text-xl"
+        >
           Event Management
         </Link>
       </div>
@@ -94,11 +98,29 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-lg">{menu}</ul>
       </div>
       <div className="navbar-end">
-        {user? <button className="btn btn-warning hover:bg-blue-700 hover:text-white">Logout</button>
-      :
-      <button className="btn btn-success hover:bg-blue-700 hover:text-white md:text-lg">Login</button>  
-      }
-      </div>
+
+{
+    user?.email ? <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+                <img src={user.photoURL} />
+            </div>
+        </label>
+        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+                <button className="btn btn-sm text-green-600 btn-ghost">{user.displayName}</button>
+            </li>
+            <li>
+                <button onClick={logout} className="btn-warning hover:bg-blue-700 hover:text-white text-lg">Logout</button>
+            </li>
+        </ul>
+    </div>
+        :
+        <Link to='/login'>
+            <button className="btn btn-sm  btn-ghost">Login</button>
+        </Link>
+}
+</div>
     </div>
   );
 };
