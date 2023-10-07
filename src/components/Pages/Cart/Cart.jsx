@@ -35,8 +35,8 @@ const Cart = () => {
       </div>
       <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
         <div className="mb-2 flex justify-between">
-          <p className="text-gray-700">{totalPrice}</p>
-          <p className="text-gray-700">$129.99</p>
+          <p className="text-gray-700">Sub total</p>
+          <p className="text-gray-700">${totalPrice}</p>
         </div>
         <div className="flex justify-between">
           <p className="text-gray-700">Shipping</p>
