@@ -4,6 +4,7 @@ import Services from "./Services";
 import CustomerFeedback from "../CustomerFeedback/CustomerFeedback";
 import Portfolio from "../Portfolio/Portfolio";
 import Banner from "../Header/Banner";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
       <HomeCards cards={data} ></HomeCards>
       <CustomerFeedback></CustomerFeedback>
       <Portfolio></Portfolio>
+      <ScrollToTop smooth width='40' color='white' style={{ background: "#1D232B" }}></ScrollToTop>
     </div>
   );
 };
