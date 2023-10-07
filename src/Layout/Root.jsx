@@ -19,7 +19,7 @@ const Root = () => {
         </div>
       </div>
       <Toaster
-  position="top-right"
+  position="top-center"
   reverseOrder={false}
 />
     </div>

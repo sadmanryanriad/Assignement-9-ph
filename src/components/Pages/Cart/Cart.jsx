@@ -51,14 +51,14 @@ const Cart = () => {
             <p className="text-gray-700">${totalPrice}</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-gray-700">Shipping</p>
-            <p className="text-gray-700">{totalPrice && '$4.99'}</p>
+            <p className="text-gray-700">Additional</p>
+            <p className="text-gray-700">${totalPrice && 50}</p>
           </div>
           <hr className="my-4" />
           <div className="flex justify-between">
             <p className="text-lg font-bold">Total</p>
             <div className="">
-              <p className="mb-1 text-lg font-bold">${totalPrice && totalPrice + 4.99}</p>
+              <p className="mb-1 text-lg font-bold">${totalPrice && totalPrice + 50}</p>
               <p className="text-sm text-gray-700">including VAT</p>
             </div>
           </div>

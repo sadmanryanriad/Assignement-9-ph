@@ -25,7 +25,7 @@ const Registration = () => {
       .then(() => {
         handleUpdateProfile(name, image);
         toast.success("user created successfully!");
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => {
         toast.error(error);

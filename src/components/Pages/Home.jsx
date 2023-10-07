@@ -27,7 +27,7 @@ const Home = () => {
 
       <div data-aos = 'fade-right' data-aos-duration="1500"><Portfolio></Portfolio></div>
 
-      <CalendarBox></CalendarBox>
+      <div data-aos = 'fade-right' data-aos-duration="1500"><CalendarBox></CalendarBox></div>
 
       <ScrollToTop smooth width='40' color='white' style={{ background: "#1D232B" }}></ScrollToTop>
     </div>
