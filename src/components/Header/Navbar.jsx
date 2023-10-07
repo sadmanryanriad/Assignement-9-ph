@@ -1,5 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 
+
+  const user = false;
+
 const menu = (
   <>
     <li>
@@ -26,7 +29,7 @@ const menu = (
       <NavLink
         to="/cart"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active font-bold" : ""
+          isPending ? "pending" : isActive ? "active font-bold " : ""
         }
       >
         Cart
@@ -83,7 +86,7 @@ const Navbar = () => {
             {menu}
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+        <Link to={"/"} className="btn btn-neutral hover:text-white normal-case text-xl">
           Event Management
         </Link>
       </div>
@@ -91,7 +94,10 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-lg">{menu}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Logout</a>
+        {user? <button className="btn btn-warning hover:bg-blue-700 hover:text-white">Logout</button>
+      :
+      <button className="btn btn-success hover:bg-blue-700 hover:text-white">Login</button>  
+      }
       </div>
     </div>
   );

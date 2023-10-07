@@ -16,7 +16,7 @@ const Banner = () => {
               Embrace each day with enthusiasm, for every moment is an
               opportunity to create a brighter tomorrow.
             </p>
-            <button className="btn btn-neutral">Book Now</button>
+            <button className="btn hover:text-white btn-neutral">Book Now</button>
           </div>
         </div>
       </div>

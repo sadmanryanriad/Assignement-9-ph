@@ -91,6 +91,7 @@ const CustomerFeedback = () => {
       </div>
     </div>
   </div>
+  <div className="w-full flex justify-end"><button className="btn btn-warning btn-sm hover:bg-success mt-5 mb-10">see more</button></div>
 </section>
   );
 };
