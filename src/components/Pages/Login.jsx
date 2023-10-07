@@ -116,7 +116,7 @@ const Login = () => {
             <div className="flex w-full">
               <button
                 type="submit"
-                className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-neutral hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in"
+                className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base  bg-gradient-to-r from-green-500 via-success to-green-400 hover:text-black rounded py-2 w-full transition duration-150 ease-in"
               >
                 <span className="mr-2 uppercase">Login</span>
                 <span>
@@ -139,7 +139,7 @@ const Login = () => {
         <div className="flex justify-center items-center mt-6">
           <Link
             to={'/registration'}
-            className="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center"
+            className="inline-flex items-center font-bold text-green-600 hover:text-blue-600 text-xs text-center"
           >
             <span>
               <svg

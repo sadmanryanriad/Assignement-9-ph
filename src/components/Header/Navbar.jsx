@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className="btn text-sm btn-warning hover:text-white normal-case md:text-xl"
+          className="btn text-sm bg-gradient-to-r from-green-500 via-success to-green-400 hover:text-white normal-case md:text-xl"
         >
           Event Management
         </Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={logout}
-                  className="btn-warning hover:bg-blue-700 hover:text-white text-lg"
+                  className="btn-warning hover: bg-gradient-to-r from-green-500 via-success to-green-400 hover:text-white text-lg"
                 >
                   Logout
                 </button>
@@ -127,7 +127,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm hover:text-white btn-success">Login<span><FiLogIn></FiLogIn></span></button>
+            <button className="btn btn-sm hover:text-white  bg-gradient-to-r from-green-500 via-success to-green-400">Login<span><FiLogIn></FiLogIn></span></button>
           </Link>
         )}
       </div>

@@ -19,7 +19,7 @@ const Card = ({card}) => {
         <h2 className="font-bold">Price: ${price}</h2>
         <p>{description.slice(0,100)}...</p>
         <div className="card-actions justify-center">
-          <Link to={`services/${id}`}><button className="btn btn-success hover:text-white btn-sm mt-5">See details</button></Link>
+          <Link to={`services/${id}`}><button className="btn  bg-gradient-to-r from-green-500 via-success to-green-400 hover:text-white btn-sm mt-5">See details</button></Link>
         </div>
       </div>
     </div>
