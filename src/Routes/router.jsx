@@ -6,6 +6,7 @@ import Login from "../components/Pages/Login";
 import Cart from "../components/Pages/Cart/Cart";
 import ServiceDetail from "../components/ServiceDetail/serviceDetail";
 import Prices from "../components/Pages/Prices";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/services/:id',
-          element: <ServiceDetail></ServiceDetail>,
+          element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
           loader: ()=>fetch('/data.json')
         },
         {
