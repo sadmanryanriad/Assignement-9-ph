@@ -127,7 +127,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm  btn-success">Login<span><FiLogIn></FiLogIn></span></button>
+            <button className="btn btn-sm hover:text-white btn-success">Login<span><FiLogIn></FiLogIn></span></button>
           </Link>
         )}
       </div>
