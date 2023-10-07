@@ -86,7 +86,7 @@ const Navbar = () => {
             {menu}
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-neutral hover:text-white normal-case text-xl">
+        <Link to={"/"} className="btn text-sm btn-neutral hover:text-white normal-case md:text-xl">
           Event Management
         </Link>
       </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user? <button className="btn btn-warning hover:bg-blue-700 hover:text-white">Logout</button>
       :
-      <button className="btn btn-success hover:bg-blue-700 hover:text-white">Login</button>  
+      <button className="btn btn-success hover:bg-blue-700 hover:text-white md:text-lg">Login</button>  
       }
       </div>
     </div>
